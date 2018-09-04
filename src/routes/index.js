@@ -8,9 +8,9 @@ import swaggerUi from 'swagger-ui-express'
 const options = {
   definition: {
     info: {
-      title: 'Emporium admin', // Title (required)
+      title: 'Express boilerplate', // Title (required)
       version: '1.0.0', // Version (required)
-      description: 'Emporium admin',
+      description: 'Express boilerplate',
       baseUri: '/api/v1'
     },
     basePath: '/api/v1',

@@ -81,6 +81,10 @@ router.post('/login',
  *     responses:
  *       200:
  *         description: Successfully created
+ *       403:
+ *         description: User is already registered
+ *       400:
+ *         description: Wrong input format
  */
 
 router.post('/register',
