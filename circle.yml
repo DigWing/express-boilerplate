@@ -1,0 +1,14 @@
+
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:7.10
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - deploy:
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              scp -o "StrictHostKeyChecking no" -r ~/repo/* $DROPLET_USER@$DROPLET_IP:~/daocracy-server
+            fi
